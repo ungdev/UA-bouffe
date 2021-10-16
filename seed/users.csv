@@ -1,0 +1,5 @@
+id,name,key,permissions
+1,Télévision,tv,
+2,Vendeur,seller,sell
+3,Préparateur Pizza,pizza,pizza
+4,Administrateur,admin,admin

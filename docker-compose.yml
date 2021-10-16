@@ -1,0 +1,68 @@
+version: "3.9"
+
+networks:
+  turbo:
+    driver: bridge
+    name: turbo
+
+services:
+  seed:
+    build: .
+    volumes:
+      - database_seed:/srv/app/db
+  database:
+    image: docker.io/bitnami/mariadb:10.6
+    ports:
+      - 3306:3306
+    depends_on:
+      seed:
+        condition: service_completed_successfully
+    volumes:
+      - database:/bitnami/mariadb
+      - database_seed:/docker-entrypoint-initdb.d
+    env_file: env/db.env
+    networks:
+      - turbo
+    healthcheck:
+      test: ["CMD", "/opt/bitnami/scripts/mariadb/healthcheck.sh"]
+      interval: 15s
+      timeout: 5s
+      retries: 6
+  api:
+    build: api
+    ports:
+      - 3001:3001
+    depends_on:
+      database:
+        condition: service_healthy
+    env_file: env/api.env
+    networks:
+      - turbo
+  front:
+    build: front
+    ports:
+      - 8081:8081
+    env_file: env/front.env
+    networks:
+      - turbo
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - turbo
+  grafana:
+    image: bitnami/grafana:8
+    ports:
+      - 3000:3000
+    networks:
+      - turbo
+
+volumes:
+  database:
+    driver: local
+    name: ua_bouffe_db
+  database_seed:
+    driver: local
+    name: ua_bouffe_seed
