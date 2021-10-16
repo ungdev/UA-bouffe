@@ -1,4 +1,5 @@
 .gitmodules
 .editorconfig
+.github/
 api/
 front/
