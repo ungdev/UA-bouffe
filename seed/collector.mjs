@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, appendFileSync } from 'fs';
+import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -36,7 +36,7 @@ for (const file of files) {
   }
 }
 
-appendFileSync(resolve(`${__dirname}/../seed.sql`), seed, {
+writeFileSync(resolve(`${__dirname}/../seed.sql`), seed, {
   encoding: 'utf-8',
 });
 

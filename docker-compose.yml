@@ -4,6 +4,10 @@ networks:
   turbo:
     driver: bridge
     name: turbo
+  bouffe:
+    driver: bridge
+    name: bouffe
+    internal: true
 
 services:
   seed:
@@ -12,8 +16,6 @@ services:
       - database_seed:/srv/app/db
   database:
     image: docker.io/bitnami/mariadb:10.6
-    ports:
-      - 3306:3306
     depends_on:
       seed:
         condition: service_completed_successfully
@@ -22,12 +24,13 @@ services:
       - database_seed:/docker-entrypoint-initdb.d
     env_file: env/db.env
     networks:
-      - turbo
+      - bouffe
     healthcheck:
       test: ["CMD", "/opt/bitnami/scripts/mariadb/healthcheck.sh"]
       interval: 15s
       timeout: 5s
       retries: 6
+    restart: always
   api:
     build: api
     ports:
@@ -38,6 +41,8 @@ services:
     env_file: env/api.env
     networks:
       - turbo
+      - bouffe
+    restart: always
   front:
     build: front
     ports:
@@ -45,19 +50,29 @@ services:
     env_file: env/front.env
     networks:
       - turbo
+    restart: always
   adminer:
-    image: adminer
+    image: thomaslachaux/adminer-material
     restart: always
     ports:
       - 8080:8080
     networks:
       - turbo
+      - bouffe
+    restart: always
   grafana:
     image: bitnami/grafana:8
     ports:
       - 3000:3000
+    volumes:
+      # Thanks bitnami for this very clear docs : https://github.com/bitnami/bitnami-docker-grafana#configuration
+      # As stated in some very hidden docs https://github.com/bitnami/charts/tree/master/bitnami/grafana#persistence
+      # it is nice to save the data folder in /opt/bitnami/grafana too
+      - grafana:/opt/bitnami/grafana
     networks:
       - turbo
+      - bouffe
+    restart: always
 
 volumes:
   database:
@@ -66,3 +81,6 @@ volumes:
   database_seed:
     driver: local
     name: ua_bouffe_seed
+  grafana:
+    driver: local
+    name: ua_bouffe_grafana
