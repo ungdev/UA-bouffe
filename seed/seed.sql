@@ -69,3 +69,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `name` (`name`),
   UNIQUE KEY `key` (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `promotions` (
+  `key` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `orgaPrice` int(11) NOT NULL,
+  `formula` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`key`),
+  KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
