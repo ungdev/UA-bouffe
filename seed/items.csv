@@ -1,58 +1,18 @@
-id,name,key,promoKey,price,orgaPrice,available,categoryId
-1,Pepsi,pepsi,canette,100,60,0,1
-2,Pepsi Max,pepsimax,canette,100,60,1,1
-3,Ice Tea Green,iceteagreen,canette,100,60,0,1
-4,Ice Tea Pêche,iceteapeche,canette,100,60,0,1
-5,Orangina,orangina,canette,100,60,1,1
-6,Schweppes Agrumes,schweppes,canette,100,60,1,1
-7,7Up,7up,canette,100,60,0,1
-8,Fanta Orange,fanta,canette,100,60,1,1
-9,Oasis Orange,oasisorange,canette,100,60,1,1
-10,Oasis PCF,oasispcf,canette,100,60,0,1
-11,Oasis Tropical,oasistropical,canette,100,60,0,1
-12,Bouteille d'eau,eau,,70,50,1,1
-13,Monster Energy,monsterenergy,,250,200,0,1
-14,Monster Assault,monsterassault,,250,200,0,1
-15,Monster Ultra Zéro,monsterzero,,250,200,0,1
-16,Café,cafe,,50,0,1,1
-17,Thé,the,,50,0,1,1
-18,Chocolat,chocolat,,100,70,0,1
-19,Bounty,bounty,barre,100,70,1,2
-20,Snickers,snickers,barre,100,70,1,2
-21,Kinder Bueno,kinder,barre,100,70,0,2
-22,Kit Kat,kitkat,barre,100,70,1,2
-23,Twix,twix,barre,100,70,0,2
-24,Pom'potes,pompotes,,60,50,0,2
-25,Bonbons Schtroumpf,schtroumpf,,70,70,1,2
-26,Bonbons Dragibus,dragibus,,70,70,1,2
-27,Chips,chips,,60,30,1,2
-28,Crêpe Jambon Fromage,crepejambonfromage,crepe,150,100,0,3
-29,Crêpe Jambon Oeuf Fromage,crepecomplete,complete,200,150,0,3
-30,Crêpe Chèvre Miel,crepechevremiel,crepe,150,100,0,3
-31,Crêpe Fraise,crepefraise,,100,50,0,3
-32,Crêpe Abricot,crepeabricot,,100,50,0,3
-33,Crêpe Miel,crepemiel,,100,50,0,3
-34,Crêpe Sucre,crepecsucre,,100,50,0,3
-35,Crêpe Nutella,crepenutella,,100,50,0,3
-36,Croque Jambon Fromage,croquejambonfromage,croque,150,100,0,4
-37,Croque 3 Fromages,croque3fromage,croque,150,100,0,4
-38,Croque Tomate Mozza,croquetomatemozza,croque,150,100,0,4
-39,Croque Nutella,croquenutella,croquenut,100,50,0,4
-40,Pizza 4 Fromages,pizzajambonfromage,pizza,450,350,1,5
-41,Pizza Chèvre Lardons,pizzachevrelardons,pizza,450,350,1,5
-42,Pizza Royale,pizzaroyale,pizza,450,350,0,5
-43,Pizza Chorizo,pizzachorizo,pizza,450,350,0,5
-44,Sandwich Végétarien,sandvg,,250,200,1,6
-45,Sandwich Thon Mayonnaise,sandthonmayo,,250,200,1,6
-46,Sandwich Jambon Beurre,sandjambonbeurre,,250,200,1,6
-47,Pain au Chocolat,petitpain,,100,60,0,7
-48,Croissant,croissant,,100,60,1,7
-49,Tartine Confiture,tartineconfiture,,100,50,0,7
-50,Tartine Nutella,tartinenutella,,100,50,0,7
-51,Pin's,pins,,100,100,1,8
-52,T-Shirt Joueur,player-tshirt,,1500,1100,1,8
-53,T-Shirt Orga,orga-tshirt,,100000,1000,1,8
-54,Ethernet 5 mètres,ethernet5,,700,700,0,8
-55,Ethernet 7 mètres,ethernet7,,1000,1000,0,8
-56,Multiprise,multiprise,,500,500,1,8
-57,Chocolatine,chocolatine,,100000,100000,0,7
+id,name,key,promokey,price,orgaPrice,available,categoryId
+1,Coca,coca,,60,60,1,1
+2,Coca Zero,cocazero,,60,60,1,1
+3,Fuze Tea pêche,fuzeteapêche,,60,60,1,1
+4,Fanta Orange,fantaorange,,60,60,1,1
+5,Fanta Fruit du dragon,fantafruitdudragon,,60,60,1,1
+6,Oasis PCF,oasispcf,,60,60,1,1
+7,Oasis Tropical,oasistropical,,60,60,1,1
+8,Schweppes agrumes,schweppesagrumes,,60,60,1,1
+9,Crêpe Nutella,crepenutella,crepe,50,50,1,2
+10,Crêpe Sucre,crepesucre,crepe,50,50,1,2
+11,Crêpe confiture,crepeconfiture,crepe,50,50,1,2
+12,Croque 3 fromages ,croque3fromages ,croque,100,100,1,3
+13,Croque Tomate Mozza,croquetomatemozza,croque,100,100,1,3
+14,Croque Chèvre miel,croquechevremiel,croque,100,100,1,3
+15,Croque Jambon fromage ,croquejambonfromage,croque,100,100,1,3
+16,Hot-dog,hotdog,,100,100,1,4
+17,Hot-dog végé,hotdogvg,,100,100,1,4
