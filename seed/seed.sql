@@ -31,6 +31,32 @@ CREATE TABLE IF NOT EXISTS `items` (
   CONSTRAINT `items_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS `supplements` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `key` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `orgaPrice` int(11) NOT NULL,
+  `available` tinyint(1) NOT NULL,
+  `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `key` (`key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `itemsupplements` (
+  `itemKey` VARCHAR(255) NOT NULL,
+  `supplementKey` VARCHAR(255) NOT NULL,
+  `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  KEY `itemKey` (`itemKey`),
+  KEY `supplementKey` (`supplementKey`),
+  CONSTRAINT `itemsupplements_ibfk_1` FOREIGN KEY (`itemKey`) REFERENCES `items` (`key`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `itemsupplements_ibfk_2` FOREIGN KEY (`supplementKey`) REFERENCES `supplements` (`key`) ON DELETE CASCADE ON UPDATE CASCADE,
+  PRIMARY KEY (`itemKey`,`supplementKey`)
+);
+
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `place` varchar(255) NOT NULL,
@@ -56,6 +82,20 @@ CREATE TABLE IF NOT EXISTS `orderitems` (
   KEY `itemId` (`itemId`),
   CONSTRAINT `orderitems_ibfk_1` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `orderitems_ibfk_2` FOREIGN KEY (`itemId`) REFERENCES `items` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `ordersupplements` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `orderItemId` int(11) NOT NULL,
+  `supplementId` int(11) NOT NULL,
+  `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deletedAt` datetime,
+  PRIMARY KEY (`id`),
+  KEY `orderItemId` (`orderItemId`),
+  KEY `supplementId` (`supplementId`),
+  CONSTRAINT `ordersupplements_ibfk_1` FOREIGN KEY (`orderItemId`) REFERENCES `orderitems` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ordersupplements_ibfk_2` FOREIGN KEY (`supplementId`) REFERENCES `supplements` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `users` (

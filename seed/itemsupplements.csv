@@ -1,0 +1,5 @@
+@requires items
+@requires supplements
+
+itemKey,supplementKey
+hotdog,vg

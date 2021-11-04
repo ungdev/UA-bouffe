@@ -1,3 +1,5 @@
+@requires categories
+
 id,name,key,promokey,price,orgaPrice,available,categoryId
 1,Coca,coca,,60,60,1,1
 2,Coca Zero,cocazero,,60,60,1,1
@@ -15,4 +17,3 @@ id,name,key,promokey,price,orgaPrice,available,categoryId
 14,Croque Chèvre miel,croquechevremiel,croque,100,100,1,3
 15,Croque Jambon fromage ,croquejambonfromage,croque,100,100,1,3
 16,Hot-dog,hotdog,,100,100,1,4
-17,Hot-dog végé,hotdogvg,,100,100,1,4
