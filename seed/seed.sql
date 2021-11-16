@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `place` varchar(255) NOT NULL,
   `status` enum('pending','preparing','ready','finished') NOT NULL DEFAULT 'pending',
-  `method` enum('card','cash') NOT NULL,
+  `method` enum('card','cash','ticket') NOT NULL,
   `orgaPrice` tinyint(1) NOT NULL,
   `total` int(11) NOT NULL,
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
