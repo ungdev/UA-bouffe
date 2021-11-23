@@ -1,19 +1,65 @@
 @requires categories
 
-id,name,key,promokey,price,orgaPrice,available,categoryId
-1,Coca,coca,,60,60,1,1
-2,Coca Zero,cocazero,,60,60,1,1
-3,Fuze Tea pêche,fuzeteapêche,,60,60,1,1
-4,Fanta Orange,fantaorange,,60,60,1,1
-5,Fanta Fruit du dragon,fantafruitdudragon,,60,60,1,1
-6,Oasis PCF,oasispcf,,60,60,1,1
-7,Oasis Tropical,oasistropical,,60,60,1,1
-8,Schweppes agrumes,schweppesagrumes,,60,60,1,1
-9,Crêpe Nutella,crepenutella,crepe,50,50,1,2
-10,Crêpe Sucre,crepesucre,crepe,50,50,1,2
-11,Crêpe confiture,crepeconfiture,crepe,50,50,1,2
-12,Croque 3 fromages ,croque3fromages ,croque,100,100,1,3
-13,Croque Tomate Mozza,croquetomatemozza,croque,100,100,1,3
-14,Croque Chèvre miel,croquechevremiel,croque,100,100,1,3
-15,Croque Jambon fromage ,croquejambonfromage,croque,100,100,1,3
-16,Hot-dog,hotdog,,100,100,1,4
+id,name,key,promokey,orgaPrice,price,available,categoryId
+1,Coca (canette),coca,canette,80,130,1,1
+2,Coca Zero (canette),cocazero,canette,80,130,1,1
+3,Ice Tea Green (canette),iceteagreen,canette,80,130,1,1
+4,Orangina (canette),orangina,canette,80,130,1,1
+5,Schweppes agrumes (canette),schweppesagrumes,canette,80,130,1,1
+6,Ice Tea Pêche (canette),iceteapeche,canette,80,130,1,1
+7,7up (canette),sevenup,canette,80,130,1,1
+8,Fanta Orange (canette),fantaorange,canette,60,60,1,1
+9,Oasis duo Orange (canette),oasisduoorange,canette,80,130,1,1
+10,Oasis PCF (canette),oasispcf,canette,80,130,1,1
+11,Oasis Tropical (canette),oasistropical,canette,80,130,1,1
+12,Fanta Fruit du dragon (canette),fantafruitdudragon,canette,80,130,1,1
+13,Monster Energy (canette),monsterenergy,canette,200,250,1,1
+14,Monster Assault (canette),monsterassault,canette,200,250,1,1
+15,Monster Ultra Zero (canette),monsterultrazero,canette,200,250,1,1
+16,Red Bull (canette),redbull,canette,150,200,1,1
+17,Red Bull Zero (canette),redbullzero,canette,150,200,1,1
+18,Coca (bouteille),bottlecoca,bottle,250,350,1,1
+19,Fuze Tea (bouteille),bottlefuzetea,bottle,250,350,1,1
+20,Orangina (bouteille),bottleorangina,bottle,250,350,1,1
+21,Schweppes agrumes (bouteille),bottlesschweppes,bottle,250,350,1,1
+22,Fanta Orange (bouteille),bottlefanta,bottle,250,350,1,1
+23,Café,coffee,,0,50,1,1
+24,Thé,tea,,0,50,1,1
+25,Chocolat,choco,,70,100,1,1
+26,Bounty,bounty,barre,70,100,1,2
+27,Sneackers,sneackers,barre,70,100,1,2
+28,Kinder Bueno,kinderbueno,barre,70,100,1,2
+29,Kit Kat,kitkat,barre,70,100,1,2
+30,Twix,twix,barre,70,100,1,2
+31,Pom'potes,pompotes,,50,60,1,2
+32,Bonbon Schtroumpf,schtroumpf,,70,70,1,2
+33,Bonbon Dragibus,dragibus,,70,70,1,2
+34,Chips,chips,,30,60,1,2
+35,Crêpe jambon fromage,crepejambonfromage,crepejambonfromage,120,160,1,3
+36,Crêpe complète (jambon fromage oeuf),crepecomplete,crepecomplete,150,200,1,3
+37,Crêpe tomate pesto,crepetomatepesto,,120,160,1,3
+38,Croque jambon fromage,croquejambonfromage,croque,140,160,1,4
+39,Croque 3 fromages,croque3fromages,croque,140,160,1,4
+40,Croque Tomate Mozza,croquetomatemozza,croque,140,160,1,4
+41,Croque Chèvre miel,croquechevremiel,croque,140,160,1,4
+42,Pizza 4 fromages,pizza4fromages,pizza,350,450,1,5
+43,Pizza Chèvre lardons,pizzachevrelardons,pizza,350,450,1,5
+44,Pizza royale,pizzaroyale,pizza,350,450,1,5
+45,Pizza Chorizo,pizzachorizo,pizza,350,450,1,5
+46,Sandwich VG,sandwitchvg,,200,250,1,6
+47,Sandwich Thon mayo,sandwitchthonmayo,,200,250,1,6
+48,Sandwich jambon beurre,sandwitchjambonbeurre,,200,250,1,6
+49,Hotdog classique,hotdog,,150,220,1,7
+50,Hotdog Végé,hotdogvg,,170,220,1,7
+51,Crêpe fraise,crepefraise,crepe,80,140,1,8
+52,Crêpe abricot,crepeabricot,crepe,80,140,1,8
+53,Crêpe miel,crepemiel,crepe,80,140,1,8
+54,Crêpe sucre,crepesucre,crepe,60,100,1,8
+55,Crêpe nutella,crepenutella,crepe,80,140,1,8
+56,Croissant,croissant,,100,100,1,8
+57,Pain au chocolat,painchoco,,100,100,1,8
+58,Pins,pins,,100,100,1,9
+59,T-shirt,tshirt,,1200,1500,1,9
+60,Câble 5m,cable5m,,700,700,0,9
+61,Câble 7m,cable7m,,1000,1000,1,9
+62,Multiprise,multiprise,,500,500,1,9

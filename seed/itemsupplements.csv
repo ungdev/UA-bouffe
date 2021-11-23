@@ -2,4 +2,9 @@
 @requires supplements
 
 itemKey,supplementKey
-hotdog,vg
+hotdog,moutarde
+hotdog,ketchup
+hotdog,oignons
+hotdogvg,moutarde
+hotdogvg,ketchup
+hotdogvg,oignons

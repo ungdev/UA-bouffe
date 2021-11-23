@@ -1,5 +1,10 @@
 id,name,key,needsPreparation
 1,Boissons,boissons,0
-2,Crêpes,crepes,1
-3,Croques,croques,1
-4,Hot-dogs,hotdogs,1
+2,Snacks,snacks,0
+3,Galettes,galettes,1
+4,Croques,croques,1
+5,Pizzas,pizzas,1
+6,Sandwichs,sandwichs,1
+7,Hotdogs,hotdogs,1
+8,Sucré,sweet,1
+9,Goodies,goodies,0
