@@ -50,7 +50,7 @@ id,name,key,promokey,orgaPrice,price,available,categoryId
 47,Sandwich Thon mayo,sandwitchthonmayo,,200,250,1,6
 48,Sandwich jambon beurre,sandwitchjambonbeurre,,200,250,1,6
 49,Hotdog classique,hotdog,,150,220,1,7
-50,Hotdog Végé,hotdogvg,,170,220,1,7
+50,Hotdog Végé,hotdogvg,,150,220,1,7
 51,Crêpe fraise,crepefraise,crepe,110,140,1,8
 52,Crêpe abricot,crepeabricot,crepe,110,140,1,8
 53,Crêpe miel,crepemiel,crepe,110,140,1,8
