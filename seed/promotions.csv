@@ -2,7 +2,7 @@ key,name,orgaPrice,price,formula
 croque,Promo 3 Croques,400,450,croque|croque|croque
 croquecanette,Promo 3 Croques + Canette,480,550,croque|croque|croque|canette
 pizzacanette,Promo Pizza + Canette,480,550,pizza|canette
-crepejfcanette,Promo Crêpe jambon fromage + Canette,220,280,crepejambonfromage|canette
-crepecompletecanette,Promo Crêpe complète + Canette,260,320,crepecomplete|canette
+crepejfcanette,Promo Crêpe jambon fromage + Canette,200,280,crepejambonfromage|canette
+crepecompletecanette,Promo Crêpe complète + Canette,240,320,crepecomplete|canette
 crepe,Promo 3 Crêpes,300,380,crepe|crepe|crepe
 barrecanette,Promo Barre + Canette,120,200,barre|canette
