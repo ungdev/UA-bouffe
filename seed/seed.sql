@@ -119,3 +119,23 @@ CREATE TABLE IF NOT EXISTS `promotions` (
   PRIMARY KEY (`key`),
   KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `categories` (`id`,`name`,`key`,`needsPreparation`) VALUES 
+	(1,'Boissons','boissons',0),
+	(4,'Croques','croques',1),
+	(8,'Sucré','sweet',1);
+INSERT INTO `promotions` (`key`,`name`,`orgaPrice`,`price`,`formula`) VALUES 
+	('croque','Promo 3 Croques',200,200,'croque|croque|croque');
+INSERT INTO `users` (`id`,`name`,`key`,`permissions`) VALUES 
+	(1,'Télévision','tv',NULL),
+	(2,'Vendeur','seller','sell'),
+	(4,'Administrateur','admin','admin');
+INSERT INTO `items` (`id`,`name`,`key`,`promokey`,`orgaPrice`,`price`,`available`,`categoryId`) VALUES 
+	(1,'Canette','canette','canette',60,60,1,1),
+	(39,'Croque 3 fromages','croque3fromages','croque',100,100,1,4),
+	(40,'Croque Tomate Mozza','croquetomatemozza','croque',100,100,1,4),
+	(51,'Crêpe fruits rouges','crepefruitsrouges','crepe',70,70,1,8),
+	(52,'Crêpe abricot','crepeabricot','crepe',70,70,1,8),
+	(53,'Crêpe miel','crepemiel','crepe',70,70,1,8),
+	(54,'Crêpe sucre','crepesucre','crepe',70,70,1,8),
+	(55,'Crêpe nutella','crepenutella','crepe',70,70,1,8),
+	(55,'Crêpe citron','crepecitron','crepe',70,70,1,8);
