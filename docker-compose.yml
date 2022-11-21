@@ -61,7 +61,6 @@ services:
     networks:
       - public
       - internal
-    restart: always
   grafana:
     image: bitnami/grafana:8
     ports:

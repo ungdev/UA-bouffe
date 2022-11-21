@@ -61,13 +61,37 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `place` varchar(255) NOT NULL,
   `status` enum('pending','preparing','ready','finished') NOT NULL DEFAULT 'pending',
-  `method` enum('card','cash','ticket') NOT NULL,
   `orgaPrice` tinyint(1) NOT NULL,
-  `total` int(11) NOT NULL,
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `deletedAt` datetime,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3110 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `transactions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `method` enum('card','cash','ticket') NOT NULL,
+  `amount` int(11) NOT NULL,
+  `transactionId` varchar(255),
+  `orderId` int(11) NOT NULL,
+  `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deletedAt` datetime,
+  PRIMARY KEY (`id`),
+  KEY `orderId` (`orderId`),
+  CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3110 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `turbobuck` (
+  `buckId` varchar(255) NOT NULL,
+  `turboId` int(11) NOT NULL,
+  `orgaPriceId` varchar(255),
+  `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deletedAt` datetime,
+  PRIMARY KEY (`buckId`),
+  KEY `turboId` (`turboId`),
+  CONSTRAINT `turbobuck_ibfk_1` FOREIGN KEY (`turboId`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=3110 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `orderitems` (
