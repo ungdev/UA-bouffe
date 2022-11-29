@@ -1,6 +1,8 @@
 [submodule "api"]
 	path = api
 	url = git@github.com:ungdev/UA-bouffe-api
+  branch = master
 [submodule "front"]
 	path = front
 	url = git@github.com:ungdev/UA-bouffe-front
+  branch = master
