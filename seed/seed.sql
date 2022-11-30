@@ -62,6 +62,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `place` varchar(255) NOT NULL,
   `status` enum('pending','preparing','ready','finished') NOT NULL DEFAULT 'pending',
   `orgaPrice` tinyint(1) NOT NULL,
+  `buckId` varchar(255),
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `deletedAt` datetime,
