@@ -2,12 +2,12 @@
 
 id,name,key,promokey,orgaPrice,price,available,categoryId
 1,Coca (canette),coca,canette,80,130,1,1
-2,Coca Zero (canette),cocazero,canette,80,130,1,1
+2,Coca Zero (canette),cocazero,canette,80,130,0,1
 3,Ice Tea Pêche (canette),iceteapeche,canette,80,130,1,1
 4,Orangina (canette),orangina,canette,80,130,1,1
 5,Schweppes agrumes (canette),schweppesagrumes,canette,80,130,1,1
 6,Oasis PCF (canette),oasispcf,canette,80,130,1,1
-7,Oasis Tropical (canette),oasistropical,canette,80,130,1,1
+7,Tropico (canette),tropico,canette,80,130,1,1
 8,Monster (canette),monsterenergy,,200,250,1,1
 9,Café,coffee,,0,50,1,1
 10,Thé,tea,,0,50,1,1
