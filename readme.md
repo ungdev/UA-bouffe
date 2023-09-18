@@ -16,9 +16,9 @@ git clone --recurse-submodules git@github.com:ungdev/UA-bouffe
 # Si tu veux tester Turbobouffe en local, regarde les instructions
 # d'installation dans le readme des deux composants (front & api)
 cd UA-bouffe/api
-yarn
+pnpm i
 cd ../front
-yarn
+pnpm i
 
 # Les commandes suivantes te serviront si tu veux faire tourner Turbobouffe !
 # Installe docker ! On te met une commande si tu utilises linux.
