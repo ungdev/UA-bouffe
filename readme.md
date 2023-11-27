@@ -19,6 +19,8 @@ cd UA-bouffe/api
 pnpm i
 cd ../front
 pnpm i
+# Pour seed la db, crée un seed.sql dans UA-bouffe, à importer dans la db:
+node ./seed/collector.mjs
 
 # Les commandes suivantes te serviront si tu veux faire tourner Turbobouffe !
 # Installe docker ! On te met une commande si tu utilises linux.
