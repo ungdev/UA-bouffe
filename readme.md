@@ -20,7 +20,7 @@ cp .env.example .env
 cd ../front
 pnpm i
 cp .env.example .env
-# Pour seed la db, crée un seed.sql dans UA-bouffe, à importer dans la db:
+# Pour créer le seed.sql à importer dans la db:
 cd ..
 node ./seed/collector.mjs
 # Ensuite créer une DB et importer le seed.sql se trouvant dans le dossier actuel
