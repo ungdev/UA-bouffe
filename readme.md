@@ -1,4 +1,5 @@
 # Turbobouffe
+[![Build status](https://github.com/ungdev/UA-bouffe/actions/workflows/ci.yml/badge.svg)](https://github.com/ungdev/UA-bouffe/actions/workflows/ci.yml)
 
 Console de vente de l'UTT Arena
 
