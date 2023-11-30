@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `itemsupplements` (
   CONSTRAINT `itemsupplements_ibfk_1` FOREIGN KEY (`itemKey`) REFERENCES `items` (`key`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `itemsupplements_ibfk_2` FOREIGN KEY (`supplementKey`) REFERENCES `supplements` (`key`) ON DELETE CASCADE ON UPDATE CASCADE,
   PRIMARY KEY (`itemKey`,`supplementKey`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

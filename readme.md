@@ -1,4 +1,5 @@
 # Turbobouffe
+[![Build status](https://github.com/ungdev/UA-bouffe/actions/workflows/ci.yml/badge.svg)](https://github.com/ungdev/UA-bouffe/actions/workflows/ci.yml)
 
 Console de vente de l'UTT Arena
 
@@ -13,12 +14,22 @@ git clone --recurse-submodules git@github.com:ungdev/UA-bouffe
 
 # Les commandes suivantes te serviront si tu veux contribuer à Turbobouffe !
 # (elles installent les dépendances de turbobouffe)
-# Si tu veux tester Turbobouffe en local, regarde les instructions
-# d'installation dans le readme des deux composants (front & api)
+# N'hésite pas à regarder les instructions dans les readme des 2 composants
 cd UA-bouffe/api
 pnpm i
+cp .env.example .env
 cd ../front
 pnpm i
+cp .env.example .env
+# Pour créer le seed.sql à importer dans la db:
+cd ..
+node ./seed/collector.mjs
+# Ensuite créer une DB et importer le seed.sql se trouvant dans le dossier actuel
+mysql -e "CREATE DATABASE bouffe;"
+mysql bouffe < seed.sql
+# Vous pouvez maintenant exécuter le front et l'api en faisant la commande suivant dans chacun des 2 dossiers:
+pnpm dev
+
 
 # Les commandes suivantes te serviront si tu veux faire tourner Turbobouffe !
 # Installe docker ! On te met une commande si tu utilises linux.
