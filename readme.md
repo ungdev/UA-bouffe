@@ -25,8 +25,7 @@ cp .env.example .env
 cd ..
 node ./seed/collector.mjs
 # Ensuite créer une DB et importer le seed.sql se trouvant dans le dossier actuel
-mysql -e "CREATE DATABASE bouffe;"
-mysql bouffe < seed.sql
+mysql < seed.sql
 # Vous pouvez maintenant exécuter le front et l'api en faisant la commande suivant dans chacun des 2 dossiers:
 pnpm dev
 
