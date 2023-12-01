@@ -1,4 +1,5 @@
-CREATE DATABASE IF NOT EXISTS bouffe;
+DROP DATABASE IF EXISTS bouffe;
+CREATE DATABASE bouffe;
 USE bouffe;
 
 CREATE TABLE IF NOT EXISTS `categories` (
@@ -143,4 +144,11 @@ CREATE TABLE IF NOT EXISTS `promotions` (
   `formula` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`key`),
   KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `placediscord` (
+  `place` varchar(5) NOT NULL,
+  `discordId` varchar(20) NOT NULL,
+  PRIMARY KEY (`place`),
+  UNIQUE KEY (`discordId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
