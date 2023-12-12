@@ -24,7 +24,7 @@ cp .env.example .env
 # Pour créer le seed.sql à importer dans la db:
 cd ..
 node ./seed/collector.mjs
-# Ensuite créer une DB et importer le seed.sql se trouvant dans le dossier actuel
+# Ensuite importer le seed.sql se trouvant dans le dossier actuel pour créer la DB
 mysql < seed.sql
 # Vous pouvez maintenant exécuter le front et l'api en faisant la commande suivant dans chacun des 2 dossiers:
 pnpm dev
