@@ -1,5 +1,2 @@
 seed.sql
 .idea/
-env/api.env
-env/front.env
-env/db.env
