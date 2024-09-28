@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   `orgaPrice` int(11) NOT NULL,
   `available` tinyint(1) NOT NULL,
   `categoryId` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
