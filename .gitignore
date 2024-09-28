@@ -1,2 +1,3 @@
 seed.sql
 .idea/
+env/api.env
